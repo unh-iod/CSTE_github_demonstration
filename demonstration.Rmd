@@ -5,8 +5,9 @@ author: Nate Thomas, NH Occupational Health Surveillance Program | Institute on 
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   slidy_presentation: default
-  
 ---
+
+
 
 ## Purpose
 
@@ -107,7 +108,7 @@ Source: https://resources.github.com/github-and-rstudio/
 
 ![](clonerepo.png)
 
-## Adding files to the repo
+## Adding files to the repo:
 
 1. Select `r "Git > Commit"`:
 
@@ -131,13 +132,37 @@ This how you update files already in the repo:
 
 ![](commitscreen4.png)
 
+3. Push the changes to the remote github repo:
+
+![](commitscreen5.png)
+
+## Reviewing changes to the project on github:
+
+1. Navigate to the github repo url: [Example](https://github.com/unh-iod/CSTE_github_demonstration)
+
+![](githistory1.png)
+
+2. Select a file to review  and select ![History](history.png):
+
+![](filehistory.png)
+
+3. Select a Commit to review exactly what changed:
+
+![](filedifference.png)
+
 ## Inviting others to collaborate:
 
 1. Setting tab in the github repo select Collaborators:
 
 ![](collaborators.png)
 
+2. Adding github users is as easy as adding them here.
 
+3. An email invitation will be sent to the prospective collaborator - and they will be able to then accept the invitation and work on the repo.
+
+## Questions? 
+
+![](pexels-photo-356079.jpeg)
 
 ## Resources
 
