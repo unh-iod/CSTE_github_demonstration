@@ -160,6 +160,12 @@ This how you update files already in the repo:
 
 3. An email invitation will be sent to the prospective collaborator - and they will be able to then accept the invitation and work on the repo.
 
+## Ignoring files in the local directory
+
+1. Select `r "Git > Commit"` and click  ![Ignore](Ignore.png)
+
+![](Ignore1.png)
+
 ## Questions? 
 
 ![](pexels-photo-356079.jpeg)
