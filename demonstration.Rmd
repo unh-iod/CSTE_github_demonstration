@@ -127,6 +127,10 @@ Source: https://resources.github.com/github-and-rstudio/
 
 ![](collaborators.png)
 
+## Updating the file
+
+
+
 ## Resources
 
 https://resources.github.com/github-and-rstudio/
