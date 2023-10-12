@@ -121,13 +121,19 @@ Source: https://resources.github.com/github-and-rstudio/
 
 ![](commitscreen3.png)
 
+## Updating the file
+
+This how you update files already in the repo:
+
+1. Save the file locally.
+
+2. Commit the changes
+
 ## Inviting others to collaborate:
 
 1. Setting tab in the github repo select Collaborators:
 
 ![](collaborators.png)
-
-## Updating the file
 
 
 
