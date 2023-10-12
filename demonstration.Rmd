@@ -1,0 +1,118 @@
+---
+title: "Analysis Version Control Using Github in RStudio"
+subtitle: "What's Github, and how is it useful?"
+author: Nate Thomas, NH Occupational Health Surveillance Program | Institute on Disability, University of New Hampshire
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  slidy_presentation: default
+  
+---
+
+## Purpose
+
+Demonstrate:
+
+1. the benefits of utilizing github as a file retention, collaboration, and version control toolset.
+
+2. a quick How-To, to set up github and utilize it within RStudio.
+
+Disclaimer:  This is only intended for familiarization purposes - github's functionality and use far exceeds what I'll be able to go over here.  I'm not affilidated with Github in any way.
+
+## Why Use Github?
+
+**Have you ever updated a file, and regretted it - wishing you could revert back to a previous version?** - I mash Ctrl+S continuously during file/document updates as a matter of course... but sometimes I wish I hadn't.
+
+**Are your analysis files stored in a *less than easy to use and unintuitive*  C:/users/[username]/Documents folder, like a filing cabinet without folders?** Sometimes if one is just "doing this one thing quickly" and lax about keeping files rigorously organized you can really put yourself in a bind - if you have to then update it. 
+
+**Do you have to pick up analysis from projects months, even years later - and have a hard time remembering where you were at in the process?**  Long term memory should be reserved for your important moments in life... project status shouldn't have to be something you need to keep track of...
+
+## What does Github actually do? [www.github.com]
+
+Github provides a **free** (with limitations) version control and collaboration system.  
+
+Fetch - retrieve new work by others using the repo.
+
+Merge - combine fetched work with your local work.
+
+Pull - Fetch and Merge combined (run at the same time).
+
+Push - Send local work to the repo.
+
+Clone - clones a repo to your local computer. 
+
+Every github repo has a unique URL - this exact project is here: https://github.com/unh-iod/CSTE_github_demonstration 
+
+![Amit Prajapati, https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c](1_E4povWZ5H-K3OaguFQJ0IQ.jpeg)
+
+## A quick aside - SAS can be run in RStudio
+
+My personal preference is to use Github within the RStudio integrated development environment (IDE).  This isn't just for people using R as their prefered scripting language.
+
+```{r}
+library(SASmarkdown)
+```
+
+## Running SAS in RStudio
+
+Example dataset from SAS from the sashelp library: class
+
+```{sas}
+proc means data=sashelp.class;
+output out=temp;
+run;
+
+proc export data=temp
+outfile="sas_data.csv"
+dbms=csv
+replace;
+run;
+```
+
+## Passing data from SAS into R:
+
+```{r}
+library(dplyr)
+library(flextable)
+
+read.csv("sas_data.csv") %>% data.frame() %>% flextable()
+```
+
+## Where to start...?
+
+Source: https://resources.github.com/github-and-rstudio/
+
+1. Download and install [Git](https://help.github.com/articles/set-up-git/)
+
+2. Download and install [RStudio](https://www.rstudio.com/products/rstudio/download/). (1.1.383 or higher).
+
+3. Create a remote repository on Github: 
+
+![](newrepo.png) 
+
+4. Copy the unique URL from github Code tab:
+
+![https://github.com/unh-iod/CSTE_github_demonstration.git](repourl.png)
+
+5. Open RStudio and create a new project `r "New Project > Version Control > Git"``:
+
+![](newproject.png) > ![](versioncontrol.png) > ![](vcgit.png)
+
+6. Paste the unique github repo URL and select a directory in which to create the R project:
+
+![](Rproj.png)
+
+7. This will create the folder and copy all contents of the github repo into the new local directory. This is a new repo and so only contains a .gitignore file (more on this later):
+
+![](clonerepo.png)
+
+## Adding files to the repo
+
+1. Select `r "Git > Commit"`
+
+## Resources
+
+https://resources.github.com/github-and-rstudio/
+
+Install RStudio: https://posit.co/download/rstudio-desktop/ 
+
+Github quickstart: https://docs.github.com/en/get-started/quickstart/hello-world
