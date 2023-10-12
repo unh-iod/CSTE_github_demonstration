@@ -30,6 +30,8 @@ Disclaimer:  This is only intended for familiarization purposes - github's funct
 
 Github provides a **free** (with limitations) version control and collaboration system.  
 
+Repository (Repo) - a github project container.
+
 Fetch - retrieve new work by others using the repo.
 
 Merge - combine fetched work with your local work.
@@ -107,7 +109,23 @@ Source: https://resources.github.com/github-and-rstudio/
 
 ## Adding files to the repo
 
-1. Select `r "Git > Commit"`
+1. Select `r "Git > Commit"`:
+
+![](commitscreen1.png)
+
+2. Stage the new file for Commit - a "Commit message" is required:
+
+![](commitscreen2.png)
+
+3. The new repo branch "Main" is created:
+
+![](commitscreen3.png)
+
+## Inviting others to collaborate:
+
+1. Setting tab in the github repo select Collaborators:
+
+![](collaborators.png)
 
 ## Resources
 
