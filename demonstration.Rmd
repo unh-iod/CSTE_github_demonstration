@@ -7,7 +7,11 @@ output:
   slidy_presentation: default
 ---
 
-
+```{r setup = TRUE, echo=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+library(SASmarkdown)
+library(dplyr)
+library(flextable)
+```
 
 ## Purpose
 
@@ -52,12 +56,10 @@ Every github repo has a unique URL - this exact project is here: https://github.
 My personal preference is to use Github within the RStudio integrated development environment (IDE).  This isn't just for people using R as their prefered scripting language.
 
 ```{r}
-library(SASmarkdown)
+#library(SASmarkdown)
 ```
 
-## Running SAS in RStudio
-
-Example dataset from SAS from the sashelp library: class
+Example dataset (class) from SAS from the sashelp library
 
 ```{sas}
 proc means data=sashelp.class;
@@ -74,9 +76,6 @@ run;
 ## Passing data from SAS into R:
 
 ```{r}
-library(dplyr)
-library(flextable)
-
 read.csv("sas_data.csv") %>% data.frame() %>% flextable()
 ```
 
@@ -169,6 +168,18 @@ This how you update files already in the repo:
 ![](Ignore1.png)
 
 3. Select Save - this updates the .gitignore file
+
+## Please clone this repo...
+
+https://github.com/unh-iod/CSTE_github_demonstration 
+
+If you clone this repo file which generates the entire presentation is "demonstration.Rmd"
+
+Install any libraries required by 
+
+Click Knit... 
+
+![](knit.png)
 
 ## Questions? 
 
