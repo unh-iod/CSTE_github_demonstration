@@ -127,7 +127,9 @@ This how you update files already in the repo:
 
 1. Save the file locally.
 
-2. Commit the changes
+2. Commit the changes:
+
+![](commitscreen4.png)
 
 ## Inviting others to collaborate:
 
