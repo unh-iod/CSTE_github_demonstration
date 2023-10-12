@@ -164,7 +164,11 @@ This how you update files already in the repo:
 
 1. Select `r "Git > Commit"` and click  ![Ignore](Ignore.png)
 
+2. Enter file names for files that should only be stored locally (ignored by the repo)
+
 ![](Ignore1.png)
+
+3. Select Save - this updates the .gitignore file
 
 ## Questions? 
 
