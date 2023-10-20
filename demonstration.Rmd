@@ -95,15 +95,37 @@ Source: https://resources.github.com/github-and-rstudio/
 
 ![https://github.com/unh-iod/CSTE_github_demonstration.git](repourl.png)
 
-5. Open RStudio and create a new project `r "New Project > Version Control > Git"``:
+5. Open RStudio and connect to your github account using the following commands:
+
+```{r eval=FALSE}
+#if not already installed, install the package
+install.packages("usethis")
+#load the package
+library(usethis)
+# configure your git account in RStudi:
+usethis::use_git_config(user.name = "YourName", user.email = "your@mail.com")
+# create a personal access token (PAT) for git authentication:
+usethis::create_github_token() 
+# set the personal access token (PAT)
+credentials::set_github_pat("YourPAT")
+# or store it manually in '.Renviron' - parameter file for defining environment parameters when opening RStudio
+usethis::edit_r_environ()
+#--------------------------
+###########################
+# then restart RStudio !
+###########################
+#--------------------------
+```
+
+6. In RStudio create a new project `r "New Project > Version Control > Git"``:
 
 ![](newproject.png) > ![](versioncontrol.png) > ![](vcgit.png)
 
-6. Paste the unique github repo URL and select a directory in which to create the R project:
+7. Paste the unique github repo URL and select a directory in which to create the R project:
 
 ![](Rproj.png)
 
-7. This will create the folder and copy all contents of the github repo into the new local directory. This is a new repo and so only contains a .gitignore file (more on this later):
+8. This will create the folder and copy all contents of the github repo into the new local directory. This is a new repo and so only contains a .gitignore file (more on this later):
 
 ![](clonerepo.png)
 
