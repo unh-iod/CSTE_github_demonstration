@@ -195,9 +195,9 @@ This how you update files already in the repo:
 
 https://github.com/unh-iod/CSTE_github_demonstration 
 
-If you clone this repo file which generates the entire presentation is "demonstration.Rmd"
+If you clone this repo, file which generates the entire presentation is "demonstration.Rmd"
 
-Install any libraries required by 
+Install any libraries required by RStudio.
 
 Click Knit... 
 
