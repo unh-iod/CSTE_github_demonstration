@@ -79,6 +79,18 @@ run;
 read.csv("sas_data.csv") %>% data.frame() %>% flextable()
 ```
 
+## Continued aside -  STATA can be run in RStudio
+
+```{stata engine.path="//academic.unh.edu/stata/Stata16/Windows/StataIC-64.exe"}
+
+log using statadata.txt
+use https://www.stata-press.com/data/r18/fuel
+
+mean mpg1 mpg2  
+log close
+
+```
+
 ## Where to start...?
 
 Source: https://resources.github.com/github-and-rstudio/
